@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+<title id="title">A backup is useful when restore works</title>
+<desc id="desc">Rebuild the environment, restore the database and prove the application can use it. Solid arrows show flow. Dashed arrows show policy or control. The adjacent README explains the boundaries.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#44647D"/></marker>
+<marker id="policy" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#A56A10"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect width="1400" height="1000" rx="20" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1400" height="180" fill="#112B43"/>
+<rect x="70" y="48" width="32" height="4" rx="2" fill="#5DD0BD"/>
+<text x="116" y="55" font-size="13" font-weight="600" fill="#B9D0E4" text-anchor="start" letter-spacing="1.6">ARCHITECTURE 08  /  AWS CLOUD &amp; PLATFORM</text>
+<text x="70" y="108" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="start" >A backup is useful when restore works</text>
+<text x="70" y="148" font-size="20" font-weight="400" fill="#C7D7E6" text-anchor="start" >Rebuild the environment, restore the database and prove the application can use it.</text>
+<polyline points="420,294.0 525,294.0" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="700.0,358 700,380 245,380 245.0,445" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="1155.0,358 1155,410 700,410 700.0,445" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="420,509.0 525,509.0" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="875,509.0 980,509.0" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="245.0,573 245.0,660" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="420,724.0 525,724.0" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="1155.0,573 1155.0,660" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="875,724.0 980,724.0" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<rect x="70" y="233" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="70" y="230" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M82,230 H408 Q420,230 420,242 V261 H70 V242 Q70,230 82,230" fill="#EFF5FC"/>
+<text x="88" y="251" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">PRIMARY</text>
+<text x="88" y="289" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Production RDS</text>
+<text x="88" y="316" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Database and application state</text>
+<text x="88" y="337" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Backup policy / retention</text>
+<rect x="525" y="233" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="525" y="230" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M537,230 H863 Q875,230 875,242 V261 H525 V242 Q525,230 537,230" fill="#FFF7E8"/>
+<text x="543" y="251" font-size="11" font-weight="700" fill="#A56A10" text-anchor="start" letter-spacing="1.2">BACKUP</text>
+<text x="543" y="289" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Encrypted recovery copy</text>
+<text x="543" y="316" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Snapshot in recovery location</text>
+<text x="543" y="337" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Accessible recovery KMS key</text>
+<rect x="980" y="233" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="980" y="230" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M992,230 H1318 Q1330,230 1330,242 V261 H980 V242 Q980,230 992,230" fill="#F1F4F8"/>
+<text x="998" y="251" font-size="11" font-weight="700" fill="#53667E" text-anchor="start" letter-spacing="1.2">RECOVERY SOURCE</text>
+<text x="998" y="289" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Versioned infrastructure</text>
+<text x="998" y="316" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Terraform modules and inputs</text>
+<text x="998" y="337" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Approved application artifact</text>
+<rect x="70" y="448" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="70" y="445" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M82,445 H408 Q420,445 420,457 V476 H70 V457 Q70,445 82,445" fill="#EDF9F6"/>
+<text x="88" y="466" font-size="11" font-weight="700" fill="#087F80" text-anchor="start" letter-spacing="1.2">RECOVERY</text>
+<text x="88" y="504" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Restored RDS instance</text>
+<text x="88" y="531" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >New endpoint</text>
+<text x="88" y="552" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Subnet group / SG / parameters</text>
+<rect x="525" y="448" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="525" y="445" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M537,445 H863 Q875,445 875,457 V476 H525 V457 Q525,445 537,445" fill="#EFF5FC"/>
+<text x="543" y="466" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">TERRAFORM</text>
+<text x="543" y="504" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Isolated recovery environment</text>
+<text x="543" y="531" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Network before database restore</text>
+<text x="543" y="552" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Then connect the approved app</text>
+<rect x="980" y="448" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="980" y="445" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M992,445 H1318 Q1330,445 1330,457 V476 H980 V457 Q980,445 992,445" fill="#FFF7E8"/>
+<text x="998" y="466" font-size="11" font-weight="700" fill="#A56A10" text-anchor="start" letter-spacing="1.2">VALIDATION</text>
+<text x="998" y="504" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Application validation</text>
+<text x="998" y="531" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Connectivity + representative reads</text>
+<text x="998" y="552" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Health checks / write test in isolation</text>
+<rect x="70" y="663" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="70" y="660" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M82,660 H408 Q420,660 420,672 V691 H70 V672 Q70,660 82,660" fill="#F1F4F8"/>
+<text x="88" y="681" font-size="11" font-weight="700" fill="#53667E" text-anchor="start" letter-spacing="1.2">RTO / RPO</text>
+<text x="88" y="719" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Measure recovery</text>
+<text x="88" y="746" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Time to validated service</text>
+<text x="88" y="767" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Age of restored data</text>
+<rect x="525" y="663" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="525" y="660" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M537,660 H863 Q875,660 875,672 V691 H525 V672 Q525,660 537,660" fill="#FFF7E8"/>
+<text x="543" y="681" font-size="11" font-weight="700" fill="#A56A10" text-anchor="start" letter-spacing="1.2">CONTROL</text>
+<text x="543" y="719" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Recovery decision</text>
+<text x="543" y="746" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Business acceptance</text>
+<text x="543" y="767" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Write ownership / cutover plan</text>
+<rect x="980" y="663" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="980" y="660" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M992,660 H1318 Q1330,660 1330,672 V691 H980 V672 Q980,660 992,660" fill="#EDF9F6"/>
+<text x="998" y="681" font-size="11" font-weight="700" fill="#087F80" text-anchor="start" letter-spacing="1.2">RESTORED SERVICE</text>
+<text x="998" y="719" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Approved service cutover</text>
+<text x="998" y="746" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Update endpoint/configuration</text>
+<text x="998" y="767" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Observe service behavior</text>
+<g ><rect x="449.3" y="262.0" width="46.4" height="24" rx="5" fill="#F7F9FC"/><text x="472.5" y="278.0" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >copy</text></g>
+<g ><rect x="436.15" y="368" width="67.69999999999999" height="24" rx="5" fill="#F7F9FC"/><text x="470" y="384" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >restore</text></g>
+<g ><rect x="896.15" y="398" width="67.69999999999999" height="24" rx="5" fill="#F7F9FC"/><text x="930" y="414" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >rebuild</text></g>
+<g ><rect x="424.45" y="477.0" width="96.1" height="24" rx="5" fill="#F7F9FC"/><text x="472.5" y="493.0" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >DB endpoint</text></g>
+<g ><rect x="890.1" y="477.0" width="74.8" height="24" rx="5" fill="#F7F9FC"/><text x="927.5" y="493.0" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >app test</text></g>
+<g ><rect x="214.7" y="604.5" width="60.599999999999994" height="24" rx="5" fill="#F7F9FC"/><text x="245.0" y="620.5" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >record</text></g>
+<g ><rect x="435.1" y="692.0" width="74.8" height="24" rx="5" fill="#F7F9FC"/><text x="472.5" y="708.0" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >evidence</text></g>
+<g ><rect x="1131.8" y="604.5" width="46.4" height="24" rx="5" fill="#F7F9FC"/><text x="1155.0" y="620.5" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >pass</text></g>
+<g ><rect x="886.55" y="692.0" width="81.9" height="24" rx="5" fill="#F7F9FC"/><text x="927.5" y="708.0" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >authorize</text></g>
+<path d="M70,866 H108" stroke="#44647D" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="122" y="871" font-size="13" font-weight="500" fill="#53667E" text-anchor="start" >Flow / sequence</text>
+<path d="M290,866 H328" stroke="#A56A10" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<text x="342" y="871" font-size="13" font-weight="500" fill="#53667E" text-anchor="start" >Policy / control</text>
+<text x="1330" y="871" font-size="12" font-weight="600" fill="#647991" text-anchor="end" >AHMED ALI KHAN  ·  REFERENCE DESIGN</text>
+<rect x="70" y="896" width="1260" height="80" rx="10" fill="#EAF0F6"/>
+<text x="90" y="925" font-size="16" font-weight="600" fill="#173852" text-anchor="start" >RTO and RPO are business objectives. Restore tests measure whether the design can meet them.</text>
+<text x="90" y="952" font-size="16" font-weight="400" fill="#3F5870" text-anchor="start" >Terraform recreates infrastructure; database backups and application artifacts restore service state.</text>
+</g></svg>

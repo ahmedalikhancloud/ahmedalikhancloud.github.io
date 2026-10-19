@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" role="img" aria-labelledby="title desc">
+<title id="title">Lakehouse access with two boundaries</title>
+<desc id="desc">Unity Catalog controls governed access. AWS policies protect the underlying storage. Solid arrows show flow. Dashed arrows show policy or control. The adjacent README explains the boundaries.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#44647D"/></marker>
+<marker id="policy" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#A56A10"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect width="1400" height="1000" rx="20" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1400" height="180" fill="#112B43"/>
+<rect x="70" y="48" width="32" height="4" rx="2" fill="#5DD0BD"/>
+<text x="116" y="55" font-size="13" font-weight="600" fill="#B9D0E4" text-anchor="start" letter-spacing="1.6">ARCHITECTURE 05  /  AWS CLOUD &amp; PLATFORM</text>
+<text x="70" y="108" font-size="36" font-weight="700" fill="#FFFFFF" text-anchor="start" >Lakehouse access with two boundaries</text>
+<text x="70" y="148" font-size="20" font-weight="400" fill="#C7D7E6" text-anchor="start" >Unity Catalog controls governed access. AWS policies protect the underlying storage.</text>
+<polyline points="420,294.0 525,294.0" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="875,294.0 980,294.0" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="420,509.0 525,509.0" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="875,509.0 980,509.0" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="1155.0,573 1155.0,660" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="1155.0,573 1155,615 700,615 700.0,660" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<polyline points="1330,294.0 1350,294 1350,724 1330,724.0" fill="none" stroke="#44647D" stroke-width="2.2" stroke-linejoin="round"  marker-end="url(#arrow)"/>
+<polyline points="1155.0,573 1155,615 245,615 245.0,660" fill="none" stroke="#A56A10" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<rect x="70" y="233" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="70" y="230" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M82,230 H408 Q420,230 420,242 V261 H70 V242 Q70,230 82,230" fill="#EFF5FC"/>
+<text x="88" y="251" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">PLATFORM</text>
+<text x="88" y="289" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Terraform provisioning</text>
+<text x="88" y="316" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Workspace and network resources</text>
+<text x="88" y="337" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Separate provisioning identity</text>
+<rect x="525" y="233" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="525" y="230" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M537,230 H863 Q875,230 875,242 V261 H525 V242 Q525,230 537,230" fill="#EFF5FC"/>
+<text x="543" y="251" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">DATABRICKS</text>
+<text x="543" y="289" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Databricks workspace</text>
+<text x="543" y="316" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Classic compute network: AWS VPC</text>
+<text x="543" y="337" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Governed compute configuration</text>
+<rect x="980" y="233" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="980" y="230" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M992,230 H1318 Q1330,230 1330,242 V261 H980 V242 Q980,230 992,230" fill="#EDF9F6"/>
+<text x="998" y="251" font-size="11" font-weight="700" fill="#087F80" text-anchor="start" letter-spacing="1.2">DATABRICKS</text>
+<text x="998" y="289" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Authorized classic compute</text>
+<text x="998" y="316" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >User / workload identity</text>
+<text x="998" y="337" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Uses governed storage access</text>
+<rect x="70" y="448" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="70" y="445" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M82,445 H408 Q420,445 420,457 V476 H70 V457 Q70,445 82,445" fill="#FFF7E8"/>
+<text x="88" y="466" font-size="11" font-weight="700" fill="#A56A10" text-anchor="start" letter-spacing="1.2">GOVERNANCE</text>
+<text x="88" y="504" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Unity Catalog</text>
+<text x="88" y="531" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Catalog / schema / table grants</text>
+<text x="88" y="552" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Processing versus consumer access</text>
+<rect x="525" y="448" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="525" y="445" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M537,445 H863 Q875,445 875,457 V476 H525 V457 Q525,445 537,445" fill="#EFF5FC"/>
+<text x="543" y="466" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">UNITY CATALOG</text>
+<text x="543" y="504" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >External locations</text>
+<text x="543" y="531" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >S3 path + storage credential</text>
+<text x="543" y="552" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Governed location privileges</text>
+<rect x="980" y="448" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="980" y="445" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M992,445 H1318 Q1330,445 1330,457 V476 H980 V457 Q980,445 992,445" fill="#FFF7E8"/>
+<text x="998" y="466" font-size="11" font-weight="700" fill="#A56A10" text-anchor="start" letter-spacing="1.2">AWS IDENTITY</text>
+<text x="998" y="504" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Storage credential</text>
+<text x="998" y="531" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Scoped AWS IAM role reference</text>
+<text x="998" y="552" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >S3 permissions + KMS policy</text>
+<rect x="70" y="663" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="70" y="660" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M82,660 H408 Q420,660 420,672 V691 H70 V672 Q70,660 82,660" fill="#EFF5FC"/>
+<text x="88" y="681" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">AMAZON S3</text>
+<text x="88" y="719" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Bronze Delta tables</text>
+<text x="88" y="746" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Raw / landed data</text>
+<text x="88" y="767" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Restricted processing access</text>
+<rect x="525" y="663" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="525" y="660" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M537,660 H863 Q875,660 875,672 V691 H525 V672 Q525,660 537,660" fill="#EFF5FC"/>
+<text x="543" y="681" font-size="11" font-weight="700" fill="#2463A7" text-anchor="start" letter-spacing="1.2">AMAZON S3</text>
+<text x="543" y="719" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Silver Delta tables</text>
+<text x="543" y="746" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Validated / curated data</text>
+<text x="543" y="767" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Separate grants by responsibility</text>
+<rect x="980" y="663" width="350" height="128" rx="12" fill="#DCE4ED" opacity=".45"/>
+<rect x="980" y="660" width="350" height="128" rx="12" fill="#FFFFFF" stroke="#CFDAE5"/>
+<path d="M992,660 H1318 Q1330,660 1330,672 V691 H980 V672 Q980,660 992,660" fill="#EDF9F6"/>
+<text x="998" y="681" font-size="11" font-weight="700" fill="#087F80" text-anchor="start" letter-spacing="1.2">AMAZON S3</text>
+<text x="998" y="719" font-size="20" font-weight="700" fill="#122C43" text-anchor="start" >Gold Delta tables</text>
+<text x="998" y="746" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Serving / business datasets</text>
+<text x="998" y="767" font-size="15" font-weight="400" fill="#475B70" text-anchor="start" >Consumer reads as approved</text>
+<g ><rect x="431.55" y="262.0" width="81.9" height="24" rx="5" fill="#F7F9FC"/><text x="472.5" y="278.0" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >provision</text></g>
+<g ><rect x="897.2" y="262.0" width="60.599999999999994" height="24" rx="5" fill="#F7F9FC"/><text x="927.5" y="278.0" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >govern</text></g>
+<g ><rect x="431.55" y="477.0" width="81.9" height="24" rx="5" fill="#F7F9FC"/><text x="472.5" y="493.0" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >authorize</text></g>
+<g ><rect x="883.0" y="477.0" width="89.0" height="24" rx="5" fill="#F7F9FC"/><text x="927.5" y="493.0" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >references</text></g>
+<g ><rect x="1128.25" y="604.5" width="53.5" height="24" rx="5" fill="#F7F9FC"/><text x="1155.0" y="620.5" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >scope</text></g>
+<g ><rect x="873.25" y="603" width="53.5" height="24" rx="5" fill="#F7F9FC"/><text x="900" y="619" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >scope</text></g>
+<g transform="rotate(-90 1350 510)"><rect x="1301.95" y="498" width="96.1" height="24" rx="5" fill="#F7F9FC"/><text x="1350" y="514" font-size="13" font-weight="600" fill="#44647D" text-anchor="middle" >data access</text></g>
+<g ><rect x="443.25" y="603" width="53.5" height="24" rx="5" fill="#F7F9FC"/><text x="470" y="619" font-size="13" font-weight="600" fill="#A56A10" text-anchor="middle" >scope</text></g>
+<path d="M70,866 H108" stroke="#44647D" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="122" y="871" font-size="13" font-weight="500" fill="#53667E" text-anchor="start" >Flow / sequence</text>
+<path d="M290,866 H328" stroke="#A56A10" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#policy)"/>
+<text x="342" y="871" font-size="13" font-weight="500" fill="#53667E" text-anchor="start" >Policy / control</text>
+<text x="1330" y="871" font-size="12" font-weight="600" fill="#647991" text-anchor="end" >AHMED ALI KHAN  ·  REFERENCE DESIGN</text>
+<rect x="70" y="896" width="1260" height="80" rx="10" fill="#EAF0F6"/>
+<text x="90" y="925" font-size="16" font-weight="600" fill="#173852" text-anchor="start" >Access model, not an ETL pipeline: arrows do not show bronze-to-silver-to-gold transformations.</text>
+<text x="90" y="952" font-size="16" font-weight="400" fill="#3F5870" text-anchor="start" >Provisioning roles and storage credentials remain separate; broad direct S3 grants can bypass governance.</text>
+</g></svg>
